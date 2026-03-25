@@ -79,7 +79,8 @@ O dashboard foi desenhado com foco em **autonomia do usuário**, guiando a estra
  ├── 📁 dados/resumo/       # Arquivo CSV gerado via Python com o resumo consolidado de vendas
  ├── 📁 dashboard/          # Arquivo .pbix contendo a modelagem e o dashboard final
  ├── 📁 docs/               # Material de apoio e instruções do desafio
- └── 📁 notebook/           # Jupyter Notebooks com scripts de ETL e análise (Python)
+ ├── 📁 notebook/           # Jupyter Notebooks com scripts de ETL e análise (Python)
+ └── 📁 ux/                 # Backgrounds do dashboard desenvolvidos no Figma
 
 ```
 
