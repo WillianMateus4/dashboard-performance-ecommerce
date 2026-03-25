@@ -8,7 +8,7 @@
 
 Projeto para a **Comunidade ComuniDados**, proposto por [Walter Gonzaga](https://www.youtube.com/@gonzagadosdados). A partir de uma base bruta de e-commerce, foram conduzidas etapas de **ETL**, **análise exploratória** e construção de um **dashboard interativo** com foco em performance de vendas e comportamento do cliente.
 
-> 🚀 **Acesso Rápido:** [Clique aqui para acessar o Dashboard Interativo](https://app.powerbi.com/view?r=eyJrIjoiNmEwZmExNjItODdmZC00ZDEyLTllOGItZWZkYjYwZjYxNDUzIiwidCI6IjI3ODJkNTJlLWQ0ZTMtNDgzZC05OTk1LThiZDljY2UyZTM2NCJ9&pageName=1928c8d314c40bf173cb)
+> 🚀 **Acesso Rápido:** [Clique aqui para acessar o Dashboard Interativo](https://app.powerbi.com/view?r=eyJrIjoiZTM2OWYzMmYtYjMzYS00MWE4LWI4YTctYzE4ZTUxZmE2YTRmIiwidCI6IjI3ODJkNTJlLWQ0ZTMtNDgzZC05OTk1LThiZDljY2UyZTM2NCJ9&pageName=68807104d624c9d57ca2)
 
 ## 🖥️ Visão Geral do Pipeline
 
@@ -74,12 +74,13 @@ O dashboard foi desenhado com foco em **autonomia do usuário**, guiando a estra
 
 ```
 📦 desafio_ecommerce
+ ├── 📁 consulta/           # Script SQL com análises exploratórias, correções e agregações
  ├── 📁 dados/              # Base de dados original
  ├── 📁 dados/resumo/       # Arquivo CSV gerado via Python com o resumo consolidado de vendas
- ├── 📁 consulta/           # Script SQL com análises exploratórias, correções e agregações
- ├── 📁 notebook/           # Jupyter Notebooks com scripts de ETL e análise (Python)
  ├── 📁 dashboard/          # Arquivo .pbix contendo a modelagem e o dashboard final
- └── 📁 docs/               # Material de apoio e instruções do desafio
+ ├── 📁 docs/               # Material de apoio e instruções do desafio
+ └── 📁 notebook/           # Jupyter Notebooks com scripts de ETL e análise (Python)
+
 ```
 
 ## 🛠️ Ferramentas e Tecnologias
