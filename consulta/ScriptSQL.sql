@@ -5,16 +5,28 @@ ALTER TABLE vendas_desafio
 	ALTER COLUMN preco_unitario FLOAT;
 GO
 
--- Adiciona a coluna faturamento
+-- Adiciona a coluna Faturamento
 ALTER TABLE vendas_desafio
 	ADD faturamento AS (quantidade * preco_unitario);
 GO
 
-/*
-|------------------------------------------------------------
-|------------------------- DESAFIOS -------------------------
-|------------------------------------------------------------
-*/
+-- Corrigi as siglas dos Estados das Cidades corretamente
+UPDATE vendas_desafio
+SET estado = CASE 
+    WHEN cidade = 'São Paulo' THEN 'SP'
+    WHEN cidade = 'Rio de Janeiro' THEN 'RJ'
+    WHEN cidade = 'Porto Alegre' THEN 'RS'
+	WHEN cidade = 'Curitiba' THEN 'PR'
+	WHEN cidade = 'Belo Horizonte' THEN 'BH'
+    ELSE cidade
+END
+WHERE cidade IN ('São Paulo', 'Rio de Janeiro', 'Porto Alegre', 'Curitiba', 'Belo Horizonte');
+
+
+------------------------------------------------------------
+-- DESAFIOS
+------------------------------------------------------------
+
 
 -- 1. Qual o faturamento total por produto?
 
@@ -117,3 +129,24 @@ GROUP BY
 	cliente
 ORDER BY
 	faturamento_total DESC;
+
+
+/*
+	Crie uma tabela chamada resumo_vendas com:
+	- produto
+	- categoria
+	- quantidade_total
+	- faturamento_total
+*/
+
+SELECT
+	produto,
+	categoria,
+	SUM(quantidade) AS quantidade_total,
+	SUM(faturamento) AS faturamento_total
+INTO
+	resumo_vendas
+FROM
+	vendas_desafio
+GROUP BY
+	produto, categoria;
