@@ -13,14 +13,14 @@ GO
 -- Corrigi as siglas dos Estados das Cidades corretamente
 UPDATE vendas_desafio
 SET estado = CASE 
-    WHEN cidade = 'São Paulo' THEN 'SP'
+    WHEN cidade = 'Sï¿½o Paulo' THEN 'SP'
     WHEN cidade = 'Rio de Janeiro' THEN 'RJ'
     WHEN cidade = 'Porto Alegre' THEN 'RS'
 	WHEN cidade = 'Curitiba' THEN 'PR'
-	WHEN cidade = 'Belo Horizonte' THEN 'BH'
+	WHEN cidade = 'Belo Horizonte' THEN 'MG'
     ELSE cidade
 END
-WHERE cidade IN ('São Paulo', 'Rio de Janeiro', 'Porto Alegre', 'Curitiba', 'Belo Horizonte');
+WHERE cidade IN ('Sï¿½o Paulo', 'Rio de Janeiro', 'Porto Alegre', 'Curitiba', 'Belo Horizonte');
 
 
 ------------------------------------------------------------
@@ -54,7 +54,7 @@ ORDER BY
 	faturamento_total DESC;
 
 
--- 3. Qual o ticket médio por cliente?
+-- 3. Qual o ticket mï¿½dio por cliente?
 
 SELECT
 	cliente,
@@ -80,7 +80,7 @@ ORDER BY
 	faturamento_total DESC;
 
 
--- 5. Qual o faturamento por mês?
+-- 5. Qual o faturamento por mï¿½s?
 
 SELECT
 	FORMAT(data_venda, 'yyyy/MM') AS ano_mes,
@@ -93,7 +93,7 @@ ORDER BY
 	ano_mes ASC;
 
 
--- 6. Quais são os 5 produtos mais vendidos?
+-- 6. Quais sï¿½o os 5 produtos mais vendidos?
 
 SELECT TOP 5
 	produto,
